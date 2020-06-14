@@ -1,0 +1,29 @@
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #557799">#include&lt;stdio.h&gt; </span>
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{    
+    <span style="color: #333399; font-weight: bold">int</span> n,p,m,i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>,a,b;
+    scanf(<span style="background-color: #fff0f0">&quot;%d%d%d&quot;</span>,<span style="color: #333333">&amp;</span>p,<span style="color: #333333">&amp;</span>m,<span style="color: #333333">&amp;</span>n);
+    <span style="color: #008800; font-weight: bold">while</span>(n<span style="color: #333333">!=</span><span style="color: #0000DD; font-weight: bold">0</span>)
+    {    
+    a<span style="color: #333333">=</span>i<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">3</span>,b<span style="color: #333333">=</span>i<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">3</span>; 
+    <span style="color: #008800; font-weight: bold">switch</span>(a) 
+    {
+    <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">0</span>:<span style="color: #008800; font-weight: bold">if</span>(i<span style="color: #333333">==</span><span style="color: #0000DD; font-weight: bold">0</span>)
+    printf(<span style="background-color: #fff0f0">&quot;%d &quot;</span>,p);
+    <span style="color: #008800; font-weight: bold">else</span>
+    printf(<span style="background-color: #fff0f0">&quot;%d &quot;</span>,(b<span style="color: #333333">+</span><span style="color: #0000DD; font-weight: bold">1</span>)<span style="color: #333333">*</span>p<span style="color: #333333">+</span>b<span style="color: #333333">*</span>m);
+    <span style="color: #008800; font-weight: bold">break</span>; 
+    <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">1</span>:<span style="color: #008800; font-weight: bold">if</span>(i<span style="color: #333333">==</span><span style="color: #0000DD; font-weight: bold">1</span>)
+    printf(<span style="background-color: #fff0f0">&quot;%d &quot;</span>,i<span style="color: #333333">*</span>m);
+    <span style="color: #008800; font-weight: bold">else</span>
+    printf(<span style="background-color: #fff0f0">&quot;%d &quot;</span>,b<span style="color: #333333">*</span>p<span style="color: #333333">+</span>(b<span style="color: #333333">+</span><span style="color: #0000DD; font-weight: bold">1</span>)<span style="color: #333333">*</span>m);
+    <span style="color: #008800; font-weight: bold">break</span>;
+    <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">2</span>:printf(<span style="background-color: #fff0f0">&quot;%d &quot;</span>,(b<span style="color: #333333">+</span><span style="color: #0000DD; font-weight: bold">1</span>)<span style="color: #333333">*</span>p<span style="color: #333333">+</span>(b<span style="color: #333333">+</span><span style="color: #0000DD; font-weight: bold">1</span>)<span style="color: #333333">*</span>m);
+    <span style="color: #008800; font-weight: bold">break</span>;
+    }
+        n<span style="color: #333333">--</span>;
+        i<span style="color: #333333">++</span>;
+    }
+    <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+</pre></div>

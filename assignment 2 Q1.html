@@ -1,0 +1,49 @@
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #557799">#include &lt;stdio.h&gt;  </span>
+<span style="color: #557799">#define M 3 </span>
+<span style="color: #557799">#define N 3   </span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">form</span>(<span style="color: #333399; font-weight: bold">int</span> aa[], <span style="color: #333399; font-weight: bold">int</span> ma[M][N]) 
+{ 
+    <span style="color: #333399; font-weight: bold">int</span> top <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>,i,bottom <span style="color: #333333">=</span> M <span style="color: #333333">-</span> <span style="color: #0000DD; font-weight: bold">1</span>,left <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>,right <span style="color: #333333">=</span> N <span style="color: #333333">-</span> <span style="color: #0000DD; font-weight: bold">1</span>,index <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>; 
+    <span style="color: #008800; font-weight: bold">while</span> (<span style="color: #0000DD; font-weight: bold">1</span>) { 
+        <span style="color: #008800; font-weight: bold">if</span> (left <span style="color: #333333">&gt;</span> right) 
+            <span style="color: #008800; font-weight: bold">break</span>; 
+        <span style="color: #008800; font-weight: bold">for</span> (i <span style="color: #333333">=</span> left; i <span style="color: #333333">&lt;=</span> right; i<span style="color: #333333">++</span>) 
+            ma[top][i] <span style="color: #333333">=</span> aa[index<span style="color: #333333">++</span>]; 
+        top<span style="color: #333333">++</span>; 
+        <span style="color: #008800; font-weight: bold">if</span> (top <span style="color: #333333">&gt;</span> bottom) 
+            <span style="color: #008800; font-weight: bold">break</span>; 
+        <span style="color: #008800; font-weight: bold">for</span> (i <span style="color: #333333">=</span> top; i <span style="color: #333333">&lt;=</span> bottom; i<span style="color: #333333">++</span>) 
+            ma[i][right] <span style="color: #333333">=</span> aa[index<span style="color: #333333">++</span>]; 
+        right<span style="color: #333333">--</span>; 
+        <span style="color: #008800; font-weight: bold">if</span> (left <span style="color: #333333">&gt;</span> right) 
+            <span style="color: #008800; font-weight: bold">break</span>; 
+        <span style="color: #008800; font-weight: bold">for</span> (i <span style="color: #333333">=</span> right; i <span style="color: #333333">&gt;=</span> left; i<span style="color: #333333">--</span>) 
+            ma[bottom][i] <span style="color: #333333">=</span> aa[index<span style="color: #333333">++</span>]; 
+        bottom<span style="color: #333333">--</span>; 
+        <span style="color: #008800; font-weight: bold">if</span> (top <span style="color: #333333">&gt;</span> bottom) 
+            <span style="color: #008800; font-weight: bold">break</span>; 
+        <span style="color: #008800; font-weight: bold">for</span> (i <span style="color: #333333">=</span> bottom; i <span style="color: #333333">&gt;=</span> top; i<span style="color: #333333">--</span>) 
+            ma[i][left] <span style="color: #333333">=</span> aa[index<span style="color: #333333">++</span>]; 
+        left<span style="color: #333333">++</span>; 
+    } 
+} 
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">print</span>(<span style="color: #333399; font-weight: bold">int</span> ma[M][N]) 
+{ 
+   <span style="color: #333399; font-weight: bold">int</span> i,j;
+    <span style="color: #008800; font-weight: bold">for</span> (i <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>; i <span style="color: #333333">&lt;</span> M; i<span style="color: #333333">++</span>) { 
+        <span style="color: #008800; font-weight: bold">for</span> (j <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>; j <span style="color: #333333">&lt;</span> N; j<span style="color: #333333">++</span>)
+        printf(<span style="background-color: #fff0f0">&quot;%d &quot;</span>,ma[i][j]);
+        printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+    } 
+} 
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>() 
+{ 
+    <span style="color: #333399; font-weight: bold">int</span> aa[] 
+        <span style="color: #333333">=</span> { <span style="color: #0000DD; font-weight: bold">1</span>, <span style="color: #0000DD; font-weight: bold">2</span>, <span style="color: #0000DD; font-weight: bold">3</span>, <span style="color: #0000DD; font-weight: bold">4</span>, <span style="color: #0000DD; font-weight: bold">5</span>, <span style="color: #0000DD; font-weight: bold">6</span>, 
+            <span style="color: #0000DD; font-weight: bold">7</span>, <span style="color: #0000DD; font-weight: bold">8</span>, <span style="color: #0000DD; font-weight: bold">9</span>}; 
+    <span style="color: #333399; font-weight: bold">int</span> ma[M][N]; 
+    form(aa, ma); 
+    print(ma); 
+    <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>; 
+}
+</pre></div>
