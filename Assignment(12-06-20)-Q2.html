@@ -1,0 +1,40 @@
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+	<span style="color: #333399; font-weight: bold">int</span> a[<span style="color: #0000DD; font-weight: bold">10</span>][<span style="color: #0000DD; font-weight: bold">10</span>],b[<span style="color: #0000DD; font-weight: bold">10</span>][<span style="color: #0000DD; font-weight: bold">10</span>],i,j,x1,y1,x2,y2,f<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">1</span>;
+	scanf(<span style="background-color: #fff0f0">&quot;%d%d&quot;</span>,<span style="color: #333333">&amp;</span>x1,<span style="color: #333333">&amp;</span>y1);
+	scanf(<span style="background-color: #fff0f0">&quot;%d%d&quot;</span>,<span style="color: #333333">&amp;</span>x2,<span style="color: #333333">&amp;</span>y2);
+	<span style="color: #008800; font-weight: bold">if</span>(x1<span style="color: #333333">==</span>x2 <span style="color: #333333">&amp;&amp;</span> y1<span style="color: #333333">==</span>y2)
+	{
+		printf(<span style="background-color: #fff0f0">&quot;Enter 1st Matrix</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+		<span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>x1;i<span style="color: #333333">++</span>)
+		{
+			<span style="color: #008800; font-weight: bold">for</span>(j<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;j<span style="color: #333333">&lt;</span>y1;j<span style="color: #333333">++</span>)
+			scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>a[i][j]);
+		}
+		printf(<span style="background-color: #fff0f0">&quot;Enter 2nd Matrix</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+		<span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>x2;i<span style="color: #333333">++</span>)
+		{
+			<span style="color: #008800; font-weight: bold">for</span>(j<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;j<span style="color: #333333">&lt;</span>y2;j<span style="color: #333333">++</span>)
+			scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>b[i][j]);
+		}
+		<span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>x1;i<span style="color: #333333">++</span>)
+		{
+			<span style="color: #008800; font-weight: bold">for</span>(j<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;j<span style="color: #333333">&lt;</span>y1;j<span style="color: #333333">++</span>)
+			{
+				<span style="color: #008800; font-weight: bold">if</span>(a[i][j]<span style="color: #333333">!=</span>b[i][j])
+				{
+					f<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;
+					<span style="color: #008800; font-weight: bold">break</span>;
+				}
+			}
+		}
+		<span style="color: #008800; font-weight: bold">if</span>(f<span style="color: #333333">==</span><span style="color: #0000DD; font-weight: bold">0</span>)
+		printf(<span style="background-color: #fff0f0">&quot;given matrices are not equal</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+		<span style="color: #008800; font-weight: bold">else</span>
+		printf(<span style="background-color: #fff0f0">&quot;given matrices are equal</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+	}
+	<span style="color: #008800; font-weight: bold">else</span>
+	printf(<span style="background-color: #fff0f0">&quot;matrices cannot be equal with different order</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+}
+</pre></div>
